@@ -45,6 +45,7 @@ abstract class Manager
      * @return string
      */
     abstract public function getDefaultDriver();
+    abstract public function disk($name = null);
 
     /**
      * Get a driver instance.

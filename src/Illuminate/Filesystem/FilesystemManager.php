@@ -6,6 +6,7 @@ use Closure;
 use Aws\S3\S3Client;
 use OpenCloud\Rackspace;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Manager;
 use InvalidArgumentException;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\FilesystemInterface;
@@ -18,10 +19,11 @@ use League\Flysystem\AwsS3v3\AwsS3Adapter as S3Adapter;
 use League\Flysystem\Cached\Storage\Memory as MemoryStore;
 use Illuminate\Contracts\Filesystem\Factory as FactoryContract;
 
+
 /**
  * @mixin \Illuminate\Contracts\Filesystem\Filesystem
  */
-class FilesystemManager implements FactoryContract
+class FilesystemManager extends Manager
 {
     /**
      * The application instance.
@@ -368,3 +370,4 @@ class FilesystemManager implements FactoryContract
         return $this->disk()->$method(...$parameters);
     }
 }
+echo 8888888888888;
